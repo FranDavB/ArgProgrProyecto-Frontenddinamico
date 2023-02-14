@@ -10,10 +10,7 @@
 }
 
 body{
-    font-family: sans-serif;
-    background: #1D4350;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: sans-serif;                
 }
 
 .btn {
@@ -33,3 +30,37 @@ body{
 .btn:active {
     transform: scale(0.98);
 }
+
+.form-control {
+    padding: 10px 50px;
+
+}
+
+.form-control label {
+    display: block;
+}
+
+.form-control input {
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+    padding: 3px 7px;
+    font-size: 17px;
+}
+
+.form-control-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-control-check label {
+    flex: 1;
+}
+
+.form-control-check input {
+    flex: 2;
+    height: 20px;
+}
+
+@import "~bootstrap/dist/css/bootstrap.min.css";

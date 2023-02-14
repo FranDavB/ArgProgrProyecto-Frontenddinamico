@@ -1,0 +1,25 @@
+<div class="carousel">
+    <app-experiencia-item
+        *ngFor="let experience of experiences"
+        [experience]="experience"
+        (onDeleteExperience)="deleteExperience(experience)"
+        (onEditExperience)="editExperience($event)"
+        (onToggleEditExperience)="onToggleEditExperience()">
+    </app-experiencia-item>
+    <div 
+        class="experience-card"
+        *ngIf="!mostrarExpFormulario">
+        <div class="experience-data">
+            <button class="btn" (click)="showExpFormulary()">
+                <fa-icon 
+                [icon]="faCirclePlus"
+                class="fa-2xl">
+                </fa-icon>
+            </button>
+        </div>
+    </div>
+    <div class="experience-card" *ngIf="mostrarExpFormulario">
+        <app-formulario-experiencia 
+            (onaddExperience) = "addExperience($event)"></app-formulario-experiencia>
+    </div>
+</div>

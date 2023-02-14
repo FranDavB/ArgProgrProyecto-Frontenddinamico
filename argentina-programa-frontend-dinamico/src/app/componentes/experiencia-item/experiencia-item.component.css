@@ -1,0 +1,36 @@
+.experience-card{
+    height: 400px;
+    width: 300px;
+    border: 2px;
+    border-color: black;
+    border-style: groove;
+    border-radius: 20px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.experience-card:hover{
+    scale: 1.05;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.experience-data{
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+}
+.logo-empresa {
+    height: auto;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}

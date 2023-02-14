@@ -1,0 +1,38 @@
+<div class="main">
+    <div class="photo">
+        <img *ngIf="foto" class='foto' src="assets/Foto.jpg">
+        <button class="btn"><fa-icon [icon]="faPen"></fa-icon></button>
+    </div>
+
+    <div class="data">
+        <ul class="data-text">
+            <li class="nombre"> <h4>{{name}}</h4>
+                <button class="btn"><fa-icon [icon]="faPen"></fa-icon></button>
+                                <br></li>
+            <li>{{profession}}</li>
+            <li>{{text}}</li>
+            <li>{{location}}</li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<div>
+    <h1> Acerca de <app-boton-login></app-boton-login> </h1>
+    <img *ngIf="foto" class='foto' src="assets/Foto.jpg">
+</div>
+<div>
+    <h2> Biólogo y programador web</h2>
+    <br>
+    <p> {{text}} </p>
+</div> -->
+
+<!--         <div>
+            <h3> Franco David Baretta</h3>
+        </div>
+        <div>
+            <h2> Biólogo y programador web</h2>
+        </div>
+        <div>
+            {{text}}
+        </div>-->

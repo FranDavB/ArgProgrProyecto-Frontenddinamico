@@ -1,0 +1,38 @@
+<form 
+    (submit)="addExperienceSubmit()">
+    <div class="form-control">
+        <div class="form-main">
+            <label for="logourl">URL logo de la empresa</label>
+            <input 
+                type="text" 
+                name="logourl" 
+                id="logourl" 
+                placeholder="Ingrese la URL aquí"
+                [(ngModel)]="logourl">
+            <label for="companyname"> Nombre de la compañía</label>
+            <input 
+                type="text" 
+                name="companyname" 
+                id="companyname" 
+                placeholder="Ingrese el nombre de la compañía aquí"
+                [(ngModel)]="companyname">
+            <label for="role"> Trabajo dentro de la compañía</label>
+            <input 
+                type="text" 
+                name="role" 
+                id="role" 
+                placeholder="Ingrese su rol aquí"
+                [(ngModel)]="role">
+            <label for="date"> Duración del trabajo</label>
+            <input 
+                type="text" 
+                name="date" 
+                id="date" 
+                placeholder="Fecha de inicio - Fecha de finalización"
+                [(ngModel)]="date">
+        </div>
+        <div class="form-buttons">
+            <input type="submit" value="Guardar experiencia" class="btn btn-success">
+        </div>
+    </div>
+</form>

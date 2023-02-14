@@ -1,0 +1,14 @@
+.form-control {
+    height: 400px;
+    width: 300px;
+    justify-content: center;
+    margin: auto;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.form-main{
+    margin-bottom: 20px;
+    padding: 5px 0;
+}

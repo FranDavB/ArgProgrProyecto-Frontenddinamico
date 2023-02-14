@@ -1,0 +1,23 @@
+.boton-login{
+    background-color: #E1E0D9;
+    color: black;
+    border-radius: 20px;
+    height: auto;
+}
+
+.boton-login:hover{
+    scale: 1.2;
+    transition: 0.3s;
+}
+
+.boton-login:active{
+    color: #E1E0D9;
+    scale: 0.98;
+}
+
+.button-logo{
+    margin-right: 10px;
+    height: 25px;
+    width: auto;
+}
+

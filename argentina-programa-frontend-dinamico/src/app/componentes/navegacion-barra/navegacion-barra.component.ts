@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-navegacion-barra',
+  selector: 'app-header',
   templateUrl: './navegacion-barra.component.html',
   styleUrls: ['./navegacion-barra.component.css']
 })

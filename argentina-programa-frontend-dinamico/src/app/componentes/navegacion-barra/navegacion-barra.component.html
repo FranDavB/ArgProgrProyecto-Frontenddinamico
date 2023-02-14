@@ -1,9 +1,25 @@
-<ul class="nav-bar">
-    <li><a routerLink="">Inicio</a></li>
-    <li><a routerLink="/experiencia">Experiencia</a></li>
-    <li><a routerLink="/formación">Formación  Académica</a></li>
-    <li><a routerLink="/lenguajes">Lenguajes</a></li>
-    <li><a routerLink="/proyectos">Proyectos</a></li>
-    <li><app-boton-login></app-boton-login></li>
-</ul>
+<div class="nav-bar">
+    <div>
+        <img src="assets\Trebol.png" class="logo">
+    </div>
 
+    <nav>
+      <div class="dropdown show">
+        <a class="btn boton-navegacion" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="assets\Trebol.png" class="button-logo">| ¡Conóceme!
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a routerLink="" class="dropdown-item item-menu"> Inicio</a>
+          <br>
+          <a routerLink="/experiencia" class="dropdown-item item-menu">Experiencia</a>
+          <a routerLink="/formación" class="dropdown-item item-menu" >Formación  académica</a>
+          <a routerLink="/lenguajes" class="dropdown-item item-menu">Lenguajes</a>
+          <br>
+          <a routerLink="/proyectos" class="dropdown-item item-menu">Proyectos</a>
+        </div>
+      </div>
+    </nav>
+
+    <app-boton-login></app-boton-login>
+</div>

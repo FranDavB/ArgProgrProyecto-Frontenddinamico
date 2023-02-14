@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 5px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+footer{
+
+    bottom: 0;
+    min-width: 100vw;
+}

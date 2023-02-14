@@ -1,1 +1,34 @@
-<p>formulario-login works!</p>
+<form 
+    (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <br>
+        <h5>Ingresar</h5>
+        <br>
+        <label for="email"> Email </label>
+        <input 
+            type="text" 
+            name="email" 
+            id="email" 
+            placeholder="Ingrese su email"
+            >
+
+        <label 
+            for="password"> Contraseña </label>
+        <input 
+            type="text" 
+            name="password" id="password" 
+            placeholder="Ingrese su contraseña"
+            >
+            <div class="form-control form-control-check">
+                <label for="opensesion"> ¿Mantener sesión abierta? </label>
+                <input 
+                    type="checkbox" 
+                    name="opensesion" 
+                    id="opensesion"
+                    >
+            </div>
+            <br>
+            <input type="submit" value="Login" class="btn btn-success">
+            <br>
+    </div>
+</form>

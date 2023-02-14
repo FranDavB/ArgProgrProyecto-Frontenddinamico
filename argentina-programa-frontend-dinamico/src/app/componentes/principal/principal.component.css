@@ -1,0 +1,47 @@
+
+.main{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10vh;
+    padding-bottom: 11vh;
+    border-width: 2px;
+    border-color: #E1E0D9 ;
+
+}
+.photo{
+    display: flex;
+}
+.data{
+    padding-left: 80px;
+}
+
+.data-text li{
+    align-items: flex-start;
+    list-style: none;
+    text-align: justify;
+}
+
+.foto{
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    height: auto;
+    width: 175px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom left, #f7b733, #fc4a1a);
+    border-radius: 50%;
+}
+
+.foto:hover{
+    scale: 1.25;
+    transition: 0.3s;
+}
+
+.nombre{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

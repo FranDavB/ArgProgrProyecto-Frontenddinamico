@@ -1,0 +1,58 @@
+<div class="experience-card" *ngIf="!mostrarEditFormulario">
+    <div class="buttons">
+        <button 
+            class="btn"
+            (click)="onEdit(experience)"><fa-icon [icon]="faPen"
+            ></fa-icon></button>
+        <button 
+            class="btn"
+            (click)="onDelete(experience)"><fa-icon [icon]="faTimes"
+            ></fa-icon></button>
+    </div>
+    <div class="experience-data">
+        <img src="{{experience.logourl}}" class="logo-empresa">
+        <h4>{{experience.companyname}}</h4>
+        <p>{{experience.role}}</p>
+        <p>{{experience.date}}</p>
+    </div>
+</div>
+<div class="experience-card" *ngIf="mostrarEditFormulario">
+    <form 
+        (submit)="editExperienceSubmit(experience); onEdit(experience)">
+        <div class="form-control">
+            <div class="form-main">
+                <label for="logourl">URL logo de la empresa</label>
+                <input 
+                    type="text" 
+                    name="logourl" 
+                    id="logourl" 
+                    value={{experience.logourl}}
+                    [(ngModel)]="experience.logourl">
+                <label for="companyname"> Nombre de la compañía</label>
+                <input 
+                    type="text" 
+                    name="companyname" 
+                    id="companyname" 
+                    value={{experience.companyname}}
+                    [(ngModel)]="experience.companyname">
+                <label for="role"> Trabajo dentro de la compañía</label>
+                <input 
+                    type="text" 
+                    name="role" 
+                    id="role" 
+                    value={{experience.role}}
+                    [(ngModel)]="experience.role">
+                <label for="date"> Duración del trabajo</label>
+                <input 
+                    type="text" 
+                    name="date" 
+                    id="date" 
+                    value={{experience.date}}
+                    [(ngModel)]="experience.date">
+            </div>
+            <div class="form-buttons">
+                <input type="submit" value="Guardar cambios" class="btn btn-success">
+            </div>
+        </div>
+    </form>
+</div>
