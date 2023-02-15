@@ -16,6 +16,8 @@ import { MostrarFormularioService } from './Servicios/mostrar-formulario.service
 import { ExperiencesService } from './Servicios/experiences.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormularioExperienciaComponent } from './componentes/formulario-experiencia/formulario-experiencia.component';
+import { PrincipalService} from './Servicios/principal.service';
+import { FormularioPrincipalComponent } from './componentes/formulario-principal/formulario-principal.component'
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { FormularioExperienciaComponent } from './componentes/formulario-experie
     FooterComponent,
     ExperienciaComponent,
     ExperienciaItemComponent,
-    FormularioExperienciaComponent
+    FormularioExperienciaComponent,
+    FormularioPrincipalComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ import { FormularioExperienciaComponent } from './componentes/formulario-experie
   ],
   providers: [
     ExperiencesService,
-    MostrarFormularioService],
+    MostrarFormularioService,
+    PrincipalService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

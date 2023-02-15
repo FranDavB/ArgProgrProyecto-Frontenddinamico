@@ -1,23 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faPen} from '@fortawesome/free-solid-svg-icons';
-
-
+import { DatosPersonales } from 'src/app/datospersonales';
+import { PrincipalService } from 'src/app/Servicios/principal.service';
+import { MostrarFormularioService } from 'src/app/Servicios/mostrar-formulario.service';
 
 @Component({
   selector: 'app-principal',
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.css']
 })
-export class PrincipalComponent {
+export class PrincipalComponent implements OnInit {
+
+  matrizdatospersonales: DatosPersonales[] = [];
+  mostrarFormularioPrincipal: boolean = false;
   faPen = faPen;
 
+  constructor(private principalservice: PrincipalService,
+    private mostrarformulario: MostrarFormularioService){}
 
-  title: string = 'Acerca de';
-  name: string = 'Franco David Baretta';
-  profession: string = 'Biólogo y programador'
-  text: string = 'Entusiasta por las ciencias, investigador del comportamiento animal y programador de aplicaciones web. ¡Bienvenido a mi sitio!';
-  location: string = 'Córdoba, Argentina'
-  foto: boolean = true;
-  direccion: string = 'src\app\componentes\principal\Foto.jpg';
+  ngOnInit(): void {
+    this.principalservice.getExperience().subscribe((infoprincipal) => {
+      this.matrizdatospersonales = infoprincipal;
+    });
+  }
 
+  cambiarMostrarFormulario(datospersonales: DatosPersonales){
+    this.mostrarformulario.cambiarMostrarPrincipalFormulario();
+  }
 }

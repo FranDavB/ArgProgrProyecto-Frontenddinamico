@@ -6,10 +6,12 @@ import { Observable, Subject} from 'rxjs';
 })
 export class MostrarFormularioService {
 
+  private formularioPrincipal: boolean = false;
   private mostrarFormulario: boolean = false;
   private mostrarEditFormulario: boolean = false;
   private subject = new Subject<any>;
   private editsubject = new Subject<any>;
+  private principal = new Subject<any>
 
 
   constructor() { }
@@ -32,5 +34,16 @@ export class MostrarFormularioService {
   toggleMostrarEditFormulario(): Observable<any>{
     console.log('toggleMostrarEditFormulario');
     return this.editsubject.asObservable();
+  }
+
+  cambiarMostrarPrincipalFormulario(){
+    console.log('cambiarMostrarPrincipalFormulario')
+    this.formularioPrincipal = !this.formularioPrincipal;
+    this.principal.next(this.formularioPrincipal);
+  }
+
+  toggleMostrarPrincipalFormulario(): Observable<any>{
+    console.log('toggleMostrarEditFormulario');
+    return this.principal.asObservable();
   }
 }

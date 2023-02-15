@@ -1,0 +1,61 @@
+<div class="main">
+    <div class="photo">
+        <img class='foto' src="assets/Foto.jpg">
+        <button 
+            class="btn"
+            ><fa-icon [icon]="faPen"></fa-icon></button>
+    </div>
+
+    <div class="data">
+        <ul class="data-text" *ngIf="!formularioPrincipal">
+            <li class="nombre"> <h4>{{datospersonales.name}}</h4>
+                <button 
+                    class="btn"
+                    (click)="mostrarFormularioPrincipal(datospersonales)"><fa-icon [icon]="faPen"></fa-icon></button>
+                                <br></li>
+            <li>{{datospersonales.profession}}</li>
+            <li>{{datospersonales.abstract}}</li>
+            <li>{{datospersonales.location}}</li>
+        </ul>
+        <form 
+            class="principalForm"
+            *ngIf="formularioPrincipal"
+            (submit)="mostrarFormularioPrincipal(datospersonales)">
+                <div class="form-control">
+                    <div class="form-main">
+                        <label for="name">¿Cómo te llamas?</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="name" 
+                            value={{datospersonales.name}}
+                            [(ngModel)]="datospersonales.name">
+                        <label for="profession"> ¿Cuáles son tus profesiones?</label>
+                        <input 
+                            type="text" 
+                            name="profession" 
+                            id="profession" 
+                            value={{datospersonales.profession}}
+                            [(ngModel)]="datospersonales.profession">
+                        <label for="abstract"> Resumen sobre tí</label>
+                        <input 
+                            type="text" 
+                            name="abstract" 
+                            id="abstract" 
+                            value={{datospersonales.abstract}}
+                            [(ngModel)]="datospersonales.abstract">
+                        <label for="location"> ¿Dónde vives?</label>
+                        <input 
+                            type="text" 
+                            name="location" 
+                            id="location" 
+                            value={{datospersonales.location}}
+                            [(ngModel)]="datospersonales.location">
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Guardar cambios" class="btn btn-success">
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
