@@ -9,9 +9,11 @@ export class MostrarFormularioService {
   private formularioPrincipal: boolean = false;
   private mostrarFormulario: boolean = false;
   private mostrarEditFormulario: boolean = false;
+  private formularioPrincipalPhoto: boolean = false;
   private subject = new Subject<any>;
   private editsubject = new Subject<any>;
-  private principal = new Subject<any>
+  private principal = new Subject<any>;
+  private principalfoto = new Subject<any>;
 
 
   constructor() { }
@@ -45,5 +47,16 @@ export class MostrarFormularioService {
   toggleMostrarPrincipalFormulario(): Observable<any>{
     console.log('toggleMostrarEditFormulario');
     return this.principal.asObservable();
+  }
+
+  cambiarMostrarPrincipalFormularioFoto(){
+    console.log('cambiarMostrarPrincipalFormularioFoto')
+    this.formularioPrincipalPhoto = !this.formularioPrincipalPhoto;
+    this.principalfoto.next(this.formularioPrincipalPhoto);
+  }
+
+  toggleMostrarPrincipalFormularioFoto(): Observable<any>{
+    console.log('toggleMostrarEditFormulario');
+    return this.principalfoto.asObservable();
   }
 }

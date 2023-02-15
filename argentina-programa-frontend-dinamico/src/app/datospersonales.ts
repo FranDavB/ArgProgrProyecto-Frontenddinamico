@@ -6,4 +6,5 @@ export interface DatosPersonales {
     abstract: string;
     location: string;
     direccion: string;
+    photourl: string;
 }

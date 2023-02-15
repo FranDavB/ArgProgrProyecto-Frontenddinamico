@@ -1,9 +1,33 @@
 <div class="main">
     <div class="photo">
-        <img class='foto' src="assets/Foto.jpg">
+        <img 
+            class='foto' 
+            src={{datospersonales.photourl}}
+            *ngIf="!formularioPrincipalPhoto">
         <button 
             class="btn"
+            *ngIf="!formularioPrincipalPhoto"
+            (click)="mostrarFormularioPrincipalFoto(datospersonales)"
             ><fa-icon [icon]="faPen"></fa-icon></button>
+        <form 
+            class="principalFormPhoto"
+            *ngIf="formularioPrincipalPhoto"
+            (submit)="mostrarFormularioPrincipalFoto(datospersonales); submitFormularioPrincipalFoto(datospersonales)">
+                <div class="form-control">
+                    <div class="form-main">
+                        <label for="photourl"> ¿Dónde vives?</label>
+                        <input 
+                            type="text" 
+                            name="photourl" 
+                            id="photourl" 
+                            value={{datospersonales.photourl}}
+                            [(ngModel)]="datospersonales.photourl">
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Guardar cambios" class="btn btn-success">
+                    </div>
+                </div>
+        </form>
     </div>
 
     <div class="data">
@@ -20,7 +44,7 @@
         <form 
             class="principalForm"
             *ngIf="formularioPrincipal"
-            (submit)="mostrarFormularioPrincipal(datospersonales)">
+            (submit)="mostrarFormularioPrincipal(datospersonales); submitFormularioPrincipal(datospersonales)">
                 <div class="form-control">
                     <div class="form-main">
                         <label for="name">¿Cómo te llamas?</label>

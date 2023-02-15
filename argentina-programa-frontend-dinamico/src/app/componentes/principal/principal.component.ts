@@ -19,12 +19,26 @@ export class PrincipalComponent implements OnInit {
     private mostrarformulario: MostrarFormularioService){}
 
   ngOnInit(): void {
-    this.principalservice.getExperience().subscribe((infoprincipal) => {
+    this.principalservice.getDatosPersonales().subscribe((infoprincipal) => {
       this.matrizdatospersonales = infoprincipal;
     });
   }
 
+  submitPrincipalFormulario(datospersonales: DatosPersonales){
+    console.log('submitPrincipalFormulario');
+    this.principalservice.editDatosPersonales(datospersonales).subscribe();
+  }
+
+  submitPrincipalFormularioFoto(datospersonalesfoto: DatosPersonales){
+    this.principalservice.editDatosPersonalesFoto(datospersonalesfoto).subscribe();
+  }
+
   cambiarMostrarFormulario(datospersonales: DatosPersonales){
     this.mostrarformulario.cambiarMostrarPrincipalFormulario();
+  }
+
+  cambiarMostrarFormularioFoto(datospersonales: DatosPersonales){
+    console.log('cambiarMostrarFormularioFoto');
+    this.mostrarformulario.cambiarMostrarPrincipalFormularioFoto();
   }
 }

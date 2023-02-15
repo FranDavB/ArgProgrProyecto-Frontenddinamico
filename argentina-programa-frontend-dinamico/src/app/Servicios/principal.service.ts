@@ -19,9 +19,24 @@ export class PrincipalService {
 
   constructor( private http: HttpClient) { }
 
-  getExperience(): Observable<DatosPersonales[]> {
+  getDatosPersonales(): Observable<DatosPersonales[]> {
 
     return this.http.get<DatosPersonales[]>(this.apiUrl);
 
+  }
+
+  editDatosPersonales(datospersonales: DatosPersonales) : Observable<DatosPersonales> {
+
+    console.log(datospersonales);
+    const url = `${this.apiUrl}/${datospersonales.id}`;
+    console.log(url);
+    return this.http.put<DatosPersonales>(url,datospersonales,httpOptions);
+  } 
+
+  editDatosPersonalesFoto(datospersonalesfoto: DatosPersonales) : Observable<DatosPersonales> {
+    console.log(datospersonalesfoto);
+    const url = `${this.apiUrl}/${datospersonalesfoto.id}`;
+    console.log(url);
+    return this.http.put<DatosPersonales>(url,datospersonalesfoto,httpOptions);
   }
 }

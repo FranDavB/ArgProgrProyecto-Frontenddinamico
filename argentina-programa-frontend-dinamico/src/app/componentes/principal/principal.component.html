@@ -1,6 +1,9 @@
 <app-formulario-principal 
      *ngFor="let datospersonales of matrizdatospersonales"
     [datospersonales]="datospersonales"
-    (mostrarFormulario)="cambiarMostrarFormulario(datospersonales)">
+    (mostrarFormulario)="cambiarMostrarFormulario(datospersonales)"
+    (submitFormulario)="submitPrincipalFormulario(datospersonales)"
+    (mostrarFormularioFoto)="cambiarMostrarFormularioFoto(datospersonales)"
+    (submitFormularioFoto)="submitPrincipalFormularioFoto(datospersonales)">
 </app-formulario-principal>
 
