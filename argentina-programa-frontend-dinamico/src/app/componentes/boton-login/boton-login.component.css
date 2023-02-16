@@ -1,18 +1,15 @@
+*{
+    font-size: medium;
+    font-weight: 400;
+}
+
 .boton-login{
-    background-color: #E1E0D9;
     color: black;
+    padding: 10px;
+    border-width: 1px;
+    border-color: black;
     border-radius: 20px;
     height: auto;
-}
-
-.boton-login:hover{
-    scale: 1.2;
-    transition: 0.3s;
-}
-
-.boton-login:active{
-    color: #E1E0D9;
-    scale: 0.98;
 }
 
 .button-logo{

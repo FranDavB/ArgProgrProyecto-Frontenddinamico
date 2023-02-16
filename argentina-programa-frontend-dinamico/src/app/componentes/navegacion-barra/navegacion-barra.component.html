@@ -3,23 +3,22 @@
         <img src="assets\Trebol.png" class="logo">
     </div>
 
-    <nav>
-      <div class="dropdown show">
-        <a class="btn boton-navegacion" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="assets\Trebol.png" class="button-logo">| ¡Conóceme!
-        </a>
-      
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a routerLink="" class="dropdown-item item-menu"> Inicio</a>
-          <br>
-          <a routerLink="/experiencia" class="dropdown-item item-menu">Experiencia</a>
-          <a routerLink="/formación" class="dropdown-item item-menu" >Formación  académica</a>
-          <a routerLink="/lenguajes" class="dropdown-item item-menu">Lenguajes</a>
-          <br>
-          <a routerLink="/proyectos" class="dropdown-item item-menu">Proyectos</a>
+    <div class="nav-buttons">
+      <nav>
+        <div class="dropdown show">
+          <a class="btn boton-navegacion" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            MENU
+          </a>
+        
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a routerLink="" class="dropdown-item item-menu"> INICIO</a>
+            <a routerLink="/experiencia" class="dropdown-item item-menu">EXPERIENCIA</a>
+            <a routerLink="/formación" class="dropdown-item item-menu" >FORMACIÓN</a>
+            <a routerLink="/proyectos" class="dropdown-item item-menu">PROYECTOS</a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <app-boton-login></app-boton-login>
+      <app-boton-login></app-boton-login>
+    </div>
 </div>

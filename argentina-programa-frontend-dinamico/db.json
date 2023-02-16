@@ -11,9 +11,9 @@
   "infoprincipal": [
     {
       "id": 1,
-      "photourl": "https://play-lh.googleusercontent.com/sHE21LxyQNhXW5bt9xxsJmDH8HrA2B0EHH4YoOyNK2I9jr2H5E1BMmLF_XFwe6bDno4",
-      "name": "Padoru Padoru",
-      "profession": "Biólogo y programador",
+      "photourl": ".\\assets\\Foto.jpg",
+      "name": "Franco David Baretta",
+      "profession": "Biólogo y programador web",
       "abstract": "Entusiasta por las ciencias, investigador del comportamiento animal y programador de aplicaciones web. ¡Bienvenido a mi sitio!",
       "location": "Córdoba, Argentina"
     }

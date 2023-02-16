@@ -1,6 +1,6 @@
 .carousel{
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: inline-flex;
+    padding: 50px 0px;
 }
 
 .experience-card{
@@ -22,4 +22,12 @@
     transition: 0.3s;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+h5{
+    font-style: italic;
+}
+
+.scrollmenu{
+    overflow-x: auto;
 }

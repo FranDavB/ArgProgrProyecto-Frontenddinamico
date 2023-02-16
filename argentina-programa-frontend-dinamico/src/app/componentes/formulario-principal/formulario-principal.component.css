@@ -26,8 +26,8 @@
     display: flex;
     align-items: flex-start;
     margin: auto;
-    height: auto;
-    width: 175px;
+    height: 250px;
+    width: 250px;
     padding: 5px;
     box-sizing: border-box;
     background-image: linear-gradient(to bottom left, #f7b733, #fc4a1a);
