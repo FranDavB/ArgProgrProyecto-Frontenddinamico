@@ -1,16 +1,18 @@
-<div class="formacion-academica">
-    <app-formacion-item
-        *ngFor="let formacionacademica of formacionesacademica"
-        [formacionacademica]="formacionacademica"
-        (cambiarEditFormulario)="cambiarEditFormacionFormulario(formacionacademica)"
-        (submitEditFormulario)="editFormation(formacionacademica)"
-        (deleteEditFormation)="deleteFormation(formacionacademica)"
-        ></app-formacion-item>
-    <app-formulario-formacion
-        (onaddFormation)="addFormation($event)"
-        (onmostrarAddFormulario)="mostrarAddFormulario()"></app-formulario-formacion>
-</div>
+<div class="formacion">
+    <div class="formacion-academica">
+        <app-formacion-item
+            *ngFor="let formacionacademica of formacionesacademica"
+            [formacionacademica]="formacionacademica"
+            (cambiarEditFormulario)="cambiarEditFormacionFormulario(formacionacademica)"
+            (submitEditFormulario)="editFormation(formacionacademica)"
+            (deleteEditFormation)="deleteFormation(formacionacademica)"
+            ></app-formacion-item>
+        <app-formulario-formacion
+            (onaddFormation)="addFormation($event)"
+            (onmostrarAddFormulario)="mostrarAddFormulario()"></app-formulario-formacion>
+    </div>
 
-<div class="frase">
-    <p>Antes que nada, la preparación es la llave del éxito. - <strong> Alexander Graham Bell </strong></p>
+    <div class="frase">
+        <p>Antes que nada, la preparación es la llave del éxito. - <strong> Alexander Graham Bell </strong></p>
+    </div>
 </div>

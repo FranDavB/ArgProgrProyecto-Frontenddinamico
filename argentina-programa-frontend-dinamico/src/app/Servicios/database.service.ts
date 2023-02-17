@@ -99,7 +99,8 @@ export class DatabaseService {
   }
 
   addFormation(newformacionacademica: FormacionAcademica): Observable<FormacionAcademica>{
-    return this.http.post<FormacionAcademica>(this.apiExperienceUrl, newformacionacademica, httpOptions)
+    console.log('addFormation - databaseservice')
+    return this.http.post<FormacionAcademica>(this.apiFormationUrl, newformacionacademica, httpOptions)
   }
 
 }

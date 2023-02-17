@@ -6,3 +6,18 @@
     border-width: 1px;
     border-color: black;
 }
+
+.tarjeta-add{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content:space-around;
+    height: 214px;
+    width: 400px;
+    border-style:groove;
+    border-width: 2px;
+    border-color:  rgba(4,22,43,1);
+    padding-bottom: 30px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 69%, rgba(4,22,43,1) 100%);
+}

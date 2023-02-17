@@ -1,63 +1,84 @@
-<div 
-    class="tarjeta"
-    *ngIf="!mostrarEditFormationFormulario">
-    <div class="buttons">
-        <button 
-            (click)="mostrarEditFormacionFormulario(formacionacademica)"
-            class="btn"
-            ><fa-icon [icon]="faPen"
-            ></fa-icon></button>
-        <button 
-            class="btn"
-            (click)="deleteFormation(formacionacademica)"><fa-icon [icon]="faTimes"
-            ></fa-icon></button>
-    </div>
-    <div class="main">
-        <img 
-            src={{formacionacademica.urlinstitucion}} 
-            alt="Logo institución"
-            class="logoinstitucion">
-        <h4>{{formacionacademica.title}}</h4>
-        <p>{{formacionacademica.years}}</p>
-    </div>
-    <div class="footer">
-        <fa-icon 
-            [icon]="faSchool"
-            class="fa-2xl">
-        </fa-icon>
-    </div>
 
-</div>
-<div class="tarjeta" *ngIf="mostrarEditFormationFormulario">
-    <form
-        (submit)="mostrarEditFormacionFormulario(formacionacademica); editFormation(formacionacademica)">
-        <div class="form-control">
-            <div class="form-main">
-                <label for="urlinstitucion">URL logo de la Institución</label>
-                <input 
-                    type="text" 
-                    name="urlinstitucion" 
-                    id="urlinstitucion" 
-                    value={{formacionacademica.urlinstitucion}}
-                    [(ngModel)]="formacionacademica.urlinstitucion">
-                <label for="title"> Título </label>
-                <input 
-                    type="text" 
-                    name="title" 
-                    id="title" 
-                    value={{formacionacademica.title}}
-                    [(ngModel)]="formacionacademica.title">
-                <label for="years"> Años de capacitación </label>
-                <input 
-                    type="text" 
-                    name="years" 
-                    id="years" 
-                    value={{formacionacademica.years}}
-                    [(ngModel)]="formacionacademica.years">
-                <div class="form-buttons">
-                    <input type="submit" value="Guardar cambios" class="btn btn-success">
+<div class="formacion-item">
+    <div 
+        class="tarjeta"
+        *ngIf="!mostrarEditFormationFormulario">
+        <div class="buttons">
+            <button 
+                (click)="mostrarEditFormacionFormulario(formacionacademica)"
+                class="btn"
+                ><fa-icon [icon]="faPen"
+                ></fa-icon></button>
+            <button 
+                class="btn"
+                (click)="deleteFormation(formacionacademica)"><fa-icon [icon]="faTimes"
+                ></fa-icon></button>
+        </div>
+        <div class="main">
+            <div>
+                <img 
+                    src={{formacionacademica.urlinstitucion}} 
+                    alt="Logo institución"
+                    class="logoinstitucion">
+            </div>
+            <div>
+                <div class="item">
+                    <fa-icon 
+                        [icon]="faUserGraduate"
+                        class="fa-xl"></fa-icon>
+                    <h5>{{formacionacademica.title}}</h5>
+                </div>
+                <div class="item">
+                    <fa-icon 
+                    [icon]="faClock"
+                    class="fa-xl"></fa-icon>
+                    <h5>{{formacionacademica.years}}</h5>
+                </div>
+                <div class="item">
+                    <fa-icon 
+                        [icon]="faSchool"
+                        class="fa-lg">
+                    </fa-icon>
+                    <h5>UNC</h5>
                 </div>
             </div>
         </div>
-    </form>
+
+
+    </div>
+
+    <div class="tarjeta" *ngIf="mostrarEditFormationFormulario">
+        <form
+            (submit)="mostrarEditFormacionFormulario(formacionacademica); editFormation(formacionacademica)">
+            <div class="form-control">
+                <div class="form-main">
+                    <label for="urlinstitucion">URL logo de la Institución</label>
+                    <input 
+                        type="text" 
+                        name="urlinstitucion" 
+                        id="urlinstitucion" 
+                        value={{formacionacademica.urlinstitucion}}
+                        [(ngModel)]="formacionacademica.urlinstitucion">
+                    <label for="title"> Título </label>
+                    <input 
+                        type="text" 
+                        name="title" 
+                        id="title" 
+                        value={{formacionacademica.title}}
+                        [(ngModel)]="formacionacademica.title">
+                    <label for="years"> Años de capacitación </label>
+                    <input 
+                        type="text" 
+                        name="years" 
+                        id="years" 
+                        value={{formacionacademica.years}}
+                        [(ngModel)]="formacionacademica.years">
+                    <div class="form-buttons">
+                        <input type="submit" value="Guardar cambios" class="btn btn-success">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
 </div>

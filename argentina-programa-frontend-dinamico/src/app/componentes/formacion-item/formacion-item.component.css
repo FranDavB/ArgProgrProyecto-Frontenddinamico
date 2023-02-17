@@ -1,22 +1,35 @@
+.formacion-item{
+    display: block;
+    margin-bottom: 15px;
+}
 .tarjeta{
     display: block;
     height: auto;
-    width: 300px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
+    width: 400px;
+    border-style:groove;
+    border-width: 2px;
+    border-color:  rgba(4,22,43,1);
+    padding-bottom: 30px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 69%, rgba(4,22,43,1) 100%);
+    
+
 }
+
 
 .buttons{
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 50px;
+    justify-content: right;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .main{
     padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main h4{
@@ -25,10 +38,22 @@
 
 .logoinstitucion{
     height: auto;
-    width: 150px;
+    width: 100px;
     border-radius: 50%;
+    justify-content: center;
+    margin-left: 40px;
 }
 
+.item{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.item fa-icon{
+    margin-right: 40px;
+}
 .footer{
     padding-bottom: 50px;
 }

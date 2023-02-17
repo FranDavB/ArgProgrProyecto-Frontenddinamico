@@ -38,7 +38,9 @@ export class FormacionComponent implements OnInit{
 
   deleteFormation(formacionacademica: FormacionAcademica){
     console.log('deleteFormation');
-    this.database.deleteFormation(formacionacademica).subscribe();
+    this.database.deleteFormation(formacionacademica).subscribe(() =>{
+      this.formacionesacademica = this.formacionesacademica.filter (t => t.id !== formacionacademica.id)
+    });
   }
 
   

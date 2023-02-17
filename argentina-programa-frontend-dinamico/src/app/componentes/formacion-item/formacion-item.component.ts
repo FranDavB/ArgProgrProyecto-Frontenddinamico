@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { faTimes, faPen, faSchool } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faPen, faSchool, faUserGraduate, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FormacionAcademica } from 'src/app/formacionacademica';
 import { FORMACIONACADEMICA } from 'src/app/mock-formacionacademica';
 import { MostrarFormularioService } from 'src/app/Servicios/mostrar-formulario.service';
@@ -19,6 +19,8 @@ export class FormacionItemComponent {
   faPen = faPen;
   faTimes = faTimes;
   faSchool = faSchool;
+  faClock = faClock;
+  faUserGraduate = faUserGraduate;
   mostrarEditFormationFormulario: boolean = false;
   subscription? = Subscription;
 

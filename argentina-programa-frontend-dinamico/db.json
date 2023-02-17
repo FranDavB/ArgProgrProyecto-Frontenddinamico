@@ -6,24 +6,6 @@
       "role": "Programador web",
       "date": "Febrero 2023 - Actualidad",
       "id": 1
-    },
-    {
-      "urlinstitucion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlzudCKNin4yl8lwneTI7Q09KDjqRtcW_XMqKEpa6JzJ_KzlfCbRAWlmGiVXwkybsLNY8&usqp=CAU",
-      "title": "Biólogo",
-      "years": "2016 - Actualidad",
-      "id": 2
-    },
-    {
-      "urlinstitucion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlzudCKNin4yl8lwneTI7Q09KDjqRtcW_XMqKEpa6JzJ_KzlfCbRAWlmGiVXwkybsLNY8&usqp=CAU",
-      "title": "Biólogo",
-      "years": "2016 - Actualidad",
-      "id": 3
-    },
-    {
-      "urlinstitucion": "",
-      "title": "",
-      "years": "",
-      "id": 4
     }
   ],
   "infoprincipal": [
@@ -36,5 +18,12 @@
       "location": "Córdoba, Argentina"
     }
   ],
-  "formacionacademica": []
+  "formacionacademica": [
+    {
+      "urlinstitucion": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlzudCKNin4yl8lwneTI7Q09KDjqRtcW_XMqKEpa6JzJ_KzlfCbRAWlmGiVXwkybsLNY8&usqp=CAU",
+      "title": "Biologo",
+      "years": "2016 - Actualidad",
+      "id": 1
+    }
+  ]
 }
