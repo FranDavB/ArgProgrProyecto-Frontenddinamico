@@ -17,7 +17,11 @@ import { ExperiencesService } from './Servicios/experiences.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormularioExperienciaComponent } from './componentes/formulario-experiencia/formulario-experiencia.component';
 import { PrincipalService} from './Servicios/principal.service';
-import { FormularioPrincipalComponent } from './componentes/formulario-principal/formulario-principal.component'
+import { FormularioPrincipalComponent } from './componentes/formulario-principal/formulario-principal.component';
+import { FormacionComponent } from './componentes/formacion/formacion.component';
+import { FormacionItemComponent } from './componentes/formacion-item/formacion-item.component';
+import { DatabaseService } from './Servicios/database.service';
+import { FormularioFormacionComponent } from './componentes/formulario-formacion/formulario-formacion.component';
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import { FormularioPrincipalComponent } from './componentes/formulario-principal
     ExperienciaComponent,
     ExperienciaItemComponent,
     FormularioExperienciaComponent,
-    FormularioPrincipalComponent
+    FormularioPrincipalComponent,
+    FormacionComponent,
+    FormacionItemComponent,
+    FormularioFormacionComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,8 @@ import { FormularioPrincipalComponent } from './componentes/formulario-principal
   providers: [
     ExperiencesService,
     MostrarFormularioService,
-    PrincipalService],
+    PrincipalService,
+    DatabaseService],
 
   bootstrap: [AppComponent]
 })

@@ -15,27 +15,27 @@ const httpOptions = {
 })
 export class PrincipalService {
 
-  apiUrl: string = "http://localhost:3000/infoprincipal";
+  apiPrincipalUrl: string = "http://localhost:3000/infoprincipal";
 
   constructor( private http: HttpClient) { }
 
   getDatosPersonales(): Observable<DatosPersonales[]> {
 
-    return this.http.get<DatosPersonales[]>(this.apiUrl);
+    return this.http.get<DatosPersonales[]>(this.apiPrincipalUrl);
 
   }
 
   editDatosPersonales(datospersonales: DatosPersonales) : Observable<DatosPersonales> {
 
     console.log(datospersonales);
-    const url = `${this.apiUrl}/${datospersonales.id}`;
+    const url = `${this.apiPrincipalUrl}/${datospersonales.id}`;
     console.log(url);
     return this.http.put<DatosPersonales>(url,datospersonales,httpOptions);
   } 
 
   editDatosPersonalesFoto(datospersonalesfoto: DatosPersonales) : Observable<DatosPersonales> {
     console.log(datospersonalesfoto);
-    const url = `${this.apiUrl}/${datospersonalesfoto.id}`;
+    const url = `${this.apiPrincipalUrl}/${datospersonalesfoto.id}`;
     console.log(url);
     return this.http.put<DatosPersonales>(url,datospersonalesfoto,httpOptions);
   }

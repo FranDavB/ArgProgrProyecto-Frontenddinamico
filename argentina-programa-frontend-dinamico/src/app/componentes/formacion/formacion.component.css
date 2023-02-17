@@ -1,0 +1,10 @@
+.frase p{
+    font-style: italic;
+}
+
+.formacion-academica{
+    display: flex;
+    justify-content: center;
+    margin: auto;  
+    padding-bottom: 50px; 
+}

@@ -1,0 +1,52 @@
+<div 
+class="tarjeta"
+*ngIf="!mostrarAddFormulario">
+    <div 
+        >
+        <button 
+            class="btn" 
+            (click)="mostrarAddFormacionFormulario()">
+            <fa-icon 
+            [icon]="faCirclePlus"
+            class="fa-2xl">
+            </fa-icon>
+        </button>
+    </div>
+</div>
+
+<div class="tarjeta" *ngIf="mostrarAddFormulario">
+    <form
+        (submit)="addFormationSubmit()">
+        <div>
+            <h3>Agregar formación académica</h3>
+        </div>
+        <div class="form-control">
+            <div class="form-main">
+                <label for="urlinstitucion">URL logo de la Institución</label>
+                <input 
+                    type="text" 
+                    name="urlinstitucion" 
+                    id="urlinstitucion" 
+                    value="Inserte la URL del logo de la Institución Educativa"
+                    [(ngModel)]="urlinstitucion">
+                <label for="title"> Título </label>
+                <input 
+                    type="text" 
+                    name="title" 
+                    id="title" 
+                    value={{title}}
+                    [(ngModel)]="title">
+                <label for="years"> Años de capacitación </label>
+                <input 
+                    type="text" 
+                    name="years" 
+                    id="years" 
+                    value={{years}}
+                    [(ngModel)]="years">
+                <div class="form-buttons">
+                    <input type="submit" value="Guardar cambios" class="btn btn-success">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
