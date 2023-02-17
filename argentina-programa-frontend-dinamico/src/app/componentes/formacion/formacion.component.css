@@ -1,10 +1,19 @@
+.formacion{
+    max-height: 500px;
+}
 .frase p{
     font-style: italic;
+    margin-top: 20px;
 }
 
 .formacion-academica{
-    display: flex;
+    display: inline-block;
     justify-content: center;
     margin: auto;  
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
+    padding-right: 15px;
+    overflow-y: scroll;
+    height: 400px;
+
+    
 }
